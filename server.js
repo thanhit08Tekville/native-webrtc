@@ -4,7 +4,7 @@ const app = express();
 const server = http.createServer(app);
 const socket = require("socket.io");
 const io = socket(server);
-
+const path = require("path");
 const rooms = {};
 
 io.on("connection", socket => {
